@@ -1,5 +1,9 @@
 /* feedreader.js
  *
+ * Project: Front-End Web Dev - Exploring JS - Feed Reader Testing
+ * Date:    3rd May 2018
+ * Student: Colin Ashley (@colinashley306)
+
  * This is the spec file that Jasmine will read and contains
  * all of the tests that will be run against your application.
  */
@@ -16,10 +20,7 @@ $(function() {
     describe('RSS Feeds', function() {
         /* This is our first test - it tests to make sure that the
          * allFeeds variable has been defined and that it is not
-         * empty. Experiment with this before you get started on
-         * the rest of this project. What happens when you change
-         * allFeeds in app.js to be an empty array and refresh the
-         * page?
+         * empty.
          */
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
@@ -57,6 +58,7 @@ $(function() {
         /* ensures the menu element is hidden by default. */
         it('is hidden by default', function() {
             const bodyElement = document.getElementsByTagName('body');
+            /* The 'menu-hidden' class hides the menu off screen to the left */
             expect(bodyElement[0].className).toContain('menu-hidden');
         });
 
@@ -95,6 +97,7 @@ $(function() {
         it('loadFeed() loaded at least one article entry in the feed', function() {
             const feed = document.getElementsByClassName('feed');
             const entries = feed[0].getElementsByClassName('entry');
+            /* entries should be greater than 0 */
             expect(entries.length).not.toBe(0);
         });
     });
@@ -126,7 +129,7 @@ $(function() {
             });
         });
 
-        /* loadFeed()s have returned, check feed has changed */
+        /* loadFeed()s have returned, check feed innerHTML has changed */
         it('content changes following subsequent loadFeed()s', function() {
             expect(subContent).not.toBe(initContent);
         });
