@@ -111,6 +111,11 @@ $(function() {
         /* variables to hold feed content */
         let initContent = '', subContent = '';
 
+        /* check that at least 2 feeds are available for the following test */
+        if (allFeeds.length < 2) {
+            throw 'At least 2 feeds are required for this test';
+        }
+
         /* get first feed */
         beforeEach(function(done) {
             loadFeed(0, function (){
