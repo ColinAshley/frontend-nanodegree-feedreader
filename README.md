@@ -20,20 +20,20 @@ Test the Feed-Reader page using Jasmine.
   - Required Feed is displayed when selected.
 
 - Test Results
-  - Jasmine test results are displayed at bottom of page.
+  - Jasmine test results are displayed at the bottom of the page.
   - Tests performed:
     - RSS Feeds - allFeeds object exists and has 'name' & 'url' entries.
     - The Menu - default state is 'hidden' and that mouse click reveals/hides menu.
-    - Initial Entries - Ensure loadFeed() returns at least one feed entry.
+    - Initial Entries - Ensure loadFeed() returns at least one feed entry. (Async Test)
     - New Feed Selection - Content changes when new feed selected. (Async Test)
 
 ## Installation
 
 Download all the files to your local machine.
-
-- git clone https://github.com/ColinAshley/frontend-nanodegree-feedreader
-- cd frontend-nanodegree-feedreader
-
+```
+git clone https://github.com/ColinAshley/frontend-nanodegree-feedreader
+cd frontend-nanodegree-feedreader
+```
 ## Usage
 
 Open index.html using a browser.
